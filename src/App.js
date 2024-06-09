@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="app">
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         {" "}
         {/* Set basename to process.env.PUBLIC_URL */}
         <ScrollToTop />
