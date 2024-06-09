@@ -18,7 +18,7 @@ function App() {
       <Router>
         <ScrollToTop/>
         <Switch>
-          <Route path="/Shravya" exact component={Main} />
+          <Route path="/" exact component={Main} />
           <Route path="/projects" exact component={ProjectPage} />
 
           <Redirect to="/" />
