@@ -23,7 +23,7 @@ function App() {
         {/* Set basename to process.env.PUBLIC_URL */}
         <ScrollToTop />
         <Switch>
-          <Route path="/" exact component={Main} />
+          <Route path="/developer-portfolio-master" exact component={Main} />
           <Route path="/projects" exact component={ProjectPage} />
 
           <Redirect to="/" />
