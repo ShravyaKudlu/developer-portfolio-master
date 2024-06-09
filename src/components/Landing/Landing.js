@@ -97,7 +97,7 @@ function Landing() {
           style={{
             opacity: `${drawerOpen ? "0" : "1"}`,
             borderColor: '#ff4f93',
-            backgroundColor: '#212121'
+            backgroundColor: '#823ae0'
           }}
         />
         <div
