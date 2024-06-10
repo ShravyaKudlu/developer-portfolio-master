@@ -9,7 +9,6 @@ import { headerData } from "../../data/headerData";
 import { socialsData } from "../../data/socialsData";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { pink } from "@material-ui/core/colors";
 
 function Landing() {
   const { theme, drawerOpen } = useContext(ThemeContext);
@@ -96,8 +95,8 @@ function Landing() {
           className="landing--img"
           style={{
             opacity: `${drawerOpen ? "0" : "1"}`,
-            borderColor: '#ff4f93',
-            backgroundColor: '#823ae0'
+            borderColor: '#823ae0',
+            backgroundColor: '#212121'
           }}
         />
         <div
