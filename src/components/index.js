@@ -9,5 +9,4 @@ export { default as Contacts } from'./Contacts/Contacts'
 export { default as Projects } from'./Projects/Projects'
 export { default as SingleProject } from './Projects/SingleProject/SingleProject'
 export { default as Achievement } from './Achievement/Achievement'
-
 export { default as BackToTop } from'./BackToTop/BackToTop'

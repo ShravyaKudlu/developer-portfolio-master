@@ -243,7 +243,7 @@
 
 .content__container {
   overflow: hidden;
-  height: 30px; /* Adjust to match line-height */
+  height: 30px;
 }
 
 .content__container__list {

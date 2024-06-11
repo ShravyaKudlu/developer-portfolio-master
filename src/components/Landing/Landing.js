@@ -58,6 +58,10 @@ function Landing() {
       },
     },
   }));
+  const textShadowStyle = {
+    textShadow: `1px 1px 2px ${theme.primary}`,
+    fontWeight: "bold",
+  };
 
   const classes = useStyles();
 
@@ -95,8 +99,8 @@ function Landing() {
           className="landing--img"
           style={{
             opacity: `${drawerOpen ? "0" : "1"}`,
-            borderColor: '#823ae0',
-            backgroundColor: '#212121'
+            borderColor: theme.primary,
+            backgroundColor: theme.secondary,
           }}
         />
         <div
@@ -105,7 +109,7 @@ function Landing() {
         >
           <div className="lcr--content" style={{ color: theme.tertiary }}>
             <div className="content__container">
-              <ul className="content__container__list">
+              <ul className="content__container__list" style={textShadowStyle}>
                 <li className="content__container__list__item">
                   {headerData.title1}
                 </li>
@@ -116,12 +120,12 @@ function Landing() {
                   {headerData.title3}
                 </li>
                 <li className="content__container__list__item">
-                  {headerData.title4}
+                  {headerData.title5}
                 </li>
               </ul>
             </div>
             <h1>{headerData.name}</h1>
-            <p>{headerData.desciption}</p>
+            <p>{headerData.desciption1}<br/>{headerData.desciption2}</p>
 
             <div className="lcr-buttonContainer">
               {headerData.resumePdf && (
