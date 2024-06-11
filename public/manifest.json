@@ -4,13 +4,13 @@
   "icons": [
     {
       "src": "ShravyaKudlu.ico",
-      "sizes": " 16x16 24x24 32x32 64x64",
+      "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "Shravyakudlu192.png",
+      "src": "ShravyaKudlu32.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "64x64"
     },
     {
       "src": "ShravyaKudlu512.png",
