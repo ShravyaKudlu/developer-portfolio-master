@@ -38,10 +38,13 @@ import atlassian from "../assets/svg/skills/atlassian.svg";
 import ubuntu from "../assets/svg/skills/ubuntu.svg";
 import linux from "../assets/svg/skills/linux.svg";
 import dynatrace from '../assets/svg/skills/dynatrace.svg';
+import tomcat from '../assets/svg/skills/tomcat.svg';
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
+    case "tomcat":
+      return tomcat;
     case "dynatrace":
         return dynatrace;
     case "postman":
