@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { createContext, useState } from "react";
 import { themeData } from "../data/themeData";
-import Header from "../components/Header/Header";
+import DarkLightMode from "../components/DarkLightMode/DarkLightMode";
 import {
   pinkThemeLight,
   pinkThemeDark,
@@ -30,7 +30,7 @@ function ThemeContextProvider(props) {
   const value = { theme, drawerOpen, setHandleDrawer };
   return (
     <>
-      <Header onChange={handleChange} theme={theme} />
+      <DarkLightMode onChange={handleChange} theme={theme} />
       <ThemeContext.Provider value={value}>
         {props.children}
       </ThemeContext.Provider>

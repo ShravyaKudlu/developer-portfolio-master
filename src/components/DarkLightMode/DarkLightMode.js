@@ -1,11 +1,15 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
+
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
   padding: 7,
+  position: "absolute",
+  top: "25px", // Adjust as needed
+  right: "90px", // Adjust as needed
+  zIndex: 9999, // Ensure it's above other content
   "& .MuiSwitch-switchBase": {
     margin: 1,
     padding: 0,
@@ -49,20 +53,8 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-
-function Header({ onChange, theme }) {
-
-  return (
-
-      <FormControlLabel
-        control={
-          <MaterialUISwitch
-            sx={{ m: 1 }}
-            onChange={onChange}
-          />
-        }
-      />
-  );
+function DarkLightMode({ onChange, theme }) {
+  return <MaterialUISwitch sx={{ m: 1 }} onChange={onChange} />;
 }
 
-export default Header;
+export default DarkLightMode;
