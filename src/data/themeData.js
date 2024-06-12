@@ -3,9 +3,6 @@ import {
     pinkThemeLight, pinkThemeDark,purpleThemeDark,purpleThemeLight
 } from '../theme/theme'
 
-
 export const themeData = {
-    theme: pinkThemeLight
-}
-
-
+  theme: { light: pinkThemeLight, dark: pinkThemeDark }
+};
