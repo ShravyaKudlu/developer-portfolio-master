@@ -1,0 +1,13 @@
+@media (max-width: 600px) {
+  .MuiSwitch-switchBase {
+    top: "25px";
+    right: "60px";
+  }
+}
+
+@media (min-width: 1024px) {
+  & .MuiSwitch-switchBase {
+    top: "25px";
+    right: "90px";
+  }
+}

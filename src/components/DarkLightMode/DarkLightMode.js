@@ -1,15 +1,20 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
+import "./DarkLightMode.css";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
   padding: 7,
   position: "absolute",
-  top: "25px", // Adjust as needed
-  right: "90px", // Adjust as needed
-  zIndex: 9999, // Ensure it's above other content
+  top: "26.5px",
+  right: "90px",
+  zIndex: 9999,
+  [theme.breakpoints.down("sm")]: {
+    top: "26.5px",
+    right: "60px",
+  },
   "& .MuiSwitch-switchBase": {
     margin: 1,
     padding: 0,
@@ -29,7 +34,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
   },
   "& .MuiSwitch-thumb": {
-    backgroundColor: theme.palette.mode === "dark" ? "#003892" : "#001e3c",
+    backgroundColor: theme.palette.mode === "dark" ? "#813456" : "#813456",
     width: 32,
     height: 32,
     "&::before": {

@@ -1,6 +1,5 @@
 /* eslint-disable */
 import React, { createContext, useState } from "react";
-import { themeData } from "../data/themeData";
 import DarkLightMode from "../components/DarkLightMode/DarkLightMode";
 import {
   pinkThemeLight,
@@ -11,31 +10,45 @@ import {
 export const ThemeContext = createContext();
 
 function ThemeContextProvider(props) {
-  // eslint-disable-next-line
-  const [theme, setTheme] = useState(pinkThemeLight);
+  const [themeIndex, setThemeIndex] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [checked, setChecked] = useState(false);
+
+  const themes = [
+    {
+      name: "Pink Light",
+      theme: pinkThemeLight
+    },
+    {
+      name: "Pink Dark",
+      theme: pinkThemeDark
+    },
+  ];
+
+  const handleChange = () => {
+    setChecked(prevChecked => !prevChecked);
+    setThemeIndex(prevIndex => (prevIndex + 1) % themes.length);
+  };
 
   const setHandleDrawer = () => {
     setDrawerOpen(!drawerOpen);
   };
-  const [checked, setChecked] = useState(false);
 
-  const handleChange = () => {
-    setChecked((prevChecked) => !prevChecked); // Toggle checked state
-    setTheme((prevTheme) =>
-      prevTheme === pinkThemeLight ? pinkThemeDark : pinkThemeLight
-    );
+  const value = {
+    theme: themes[themeIndex].theme,
+    drawerOpen,
+    setHandleDrawer
   };
 
-  const value = { theme, drawerOpen, setHandleDrawer };
   return (
     <>
-      <DarkLightMode onChange={handleChange} theme={theme} />
+      <DarkLightMode onChange={handleChange} theme={themes[themeIndex].theme} />
       <ThemeContext.Provider value={value}>
         {props.children}
       </ThemeContext.Provider>
     </>
   );
 }
+
 
 export default ThemeContextProvider;
