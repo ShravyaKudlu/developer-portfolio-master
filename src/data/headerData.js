@@ -8,7 +8,6 @@ export const headerData = {
     title3: "[  Cloud ARCHITECT ]",
     title5: "[  AI Advocate ]",
     desciption1:"“Life is essentially an endless series of problems. The solution to one problem is merely the creation of another. Don’t hope for a life without problems. Hope for a life full of good problems.”  ",
-    desciption2:"",
     image: shravyakudluimage,
     resumePdf: resume
 }

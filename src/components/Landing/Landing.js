@@ -67,6 +67,7 @@ function Landing() {
 
   return (
     <div className="landing">
+      
       <div className="landing--container">
         <div
           className="landing--container-left"
@@ -125,7 +126,7 @@ function Landing() {
               </ul>
             </div>
             <h1>{headerData.name}</h1>
-            <p>{headerData.desciption1}<br/>{headerData.desciption2}</p>
+            <p>{headerData.desciption1}</p>
 
             <div className="lcr-buttonContainer">
               {headerData.resumePdf && (
