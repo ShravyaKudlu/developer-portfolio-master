@@ -15,14 +15,14 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
             width: 40,
             height: 40,
             borderRadius: 50,
-            border: `2px solid ${theme.tertiary}`,
-            color: theme.tertiary,
+            border: `2px solid #f7f7f7`,
+            color: "#f7f7f7",
             transition: 'all 0.2s',
             '&:hover': {
-                backgroundColor: theme.secondary,
+                backgroundColor: "#f7f7f7",
                 color: theme.primary,
                 transform: 'scale(1.1)',
-                border: `2px solid ${theme.secondary}`,
+                border: `2px solid #f7f7f7`,
             },
         },
         icon: {
@@ -44,7 +44,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                 <div className='projectContent'>
                     <h2
                         id={name.replace(' ', '-').toLowerCase()}
-                        style={{ color: theme.tertiary }}
+                        style={{ color: "#f7f7f7" }}
                     >
                         {name}
                     </h2>
