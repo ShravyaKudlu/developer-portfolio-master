@@ -8,7 +8,7 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 import { headerData } from "../../data/headerData";
 import { socialsData } from "../../data/socialsData";
 
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaCode } from "react-icons/fa";
 
 function Landing() {
   const { theme, drawerOpen } = useContext(ThemeContext);
@@ -67,7 +67,6 @@ function Landing() {
 
   return (
     <div className="landing">
-      
       <div className="landing--container">
         <div
           className="landing--container-left"
@@ -75,7 +74,11 @@ function Landing() {
         >
           <div className="lcl--content">
             {socialsData.linkedIn && (
-              <a href={socialsData.linkedIn} target="_blank" rel="noreferrer">
+              <a
+                href={socialsData.linkedIn}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaLinkedin
                   className="landing--social"
                   style={{ color: theme.secondary }}
@@ -84,8 +87,25 @@ function Landing() {
               </a>
             )}
             {socialsData.github && (
-              <a href={socialsData.github} target="_blank" rel="noreferrer">
+              <a
+                href={socialsData.github}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaGithub
+                  className="landing--social"
+                  style={{ color: theme.secondary }}
+                  aria-label="GitHub"
+                />
+              </a>
+            )}
+            {socialsData.leetcode && (
+              <a
+                href={socialsData.leetcode}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaCode
                   className="landing--social"
                   style={{ color: theme.secondary }}
                   aria-label="GitHub"
@@ -108,9 +128,15 @@ function Landing() {
           className="landing--container-right"
           style={{ backgroundColor: theme.secondary }}
         >
-          <div className="lcr--content" style={{ color: theme.tertiary }}>
+          <div
+            className="lcr--content"
+            style={{ color: theme.tertiary }}
+          >
             <div className="content__container">
-              <ul className="content__container__list" style={textShadowStyle}>
+              <ul
+                className="content__container__list"
+                style={textShadowStyle}
+              >
                 <li className="content__container__list__item">
                   {headerData.title1}
                 </li>
@@ -139,7 +165,12 @@ function Landing() {
                   <Button className={classes.resumeBtn}>Download CV</Button>
                 </a>
               )}
-              <NavLink to="/#contacts" smooth={true} spy="true" duration={2000}>
+              <NavLink
+                to="/#contacts"
+                smooth={true}
+                spy="true"
+                duration={2000}
+              >
                 <Button className={classes.contactBtn}>Contact</Button>
               </NavLink>
             </div>
